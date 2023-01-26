@@ -1,5 +1,6 @@
 <template>
   <div class="container">
+    <div class="backgroundProfile"></div>
     <div class="homeCards">
       <UserCard/>
       <SkillsCard/>
@@ -36,10 +37,28 @@
 
     background-color: #181818;
   }
+
+  /* Backgrond photo */
+  .backgroundProfile {
+    width: 100vw;
+    height: 25vh;
+
+    background-image: url("@/assets/BackgrounPhoto.jpg");
+    background-repeat: repeat;
+    background-position: center left;
+  }
+
+  /* Home */
   .homeCards {
     display: flex;
     flex-direction: row;
+    width: 100vw;
+
+    margin-top: 5%;
 
     justify-content: space-evenly;
+
+    position: absolute;
+    z-index: 3;
   }
 </style>
