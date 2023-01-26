@@ -6,7 +6,7 @@
 
     <h3 class="userName">{{ user.name }}</h3>
     <a :href="user.html_url" target="_blank" class="githubProfile">
-      <img src="@/assets/GithubIcon.svg" alt="Logo do GitHub">
+      <img src="@/assets/icons/GithubIcon.svg" alt="Logo do GitHub">
       <p class="userGithub">{{ user.login }}</p>
     </a>
 

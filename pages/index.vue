@@ -1,15 +1,20 @@
 <template>
   <div class="container">
-    <UserCard/>
+    <div class="homeCards">
+      <UserCard/>
+      <SkillsCard/>
+    </div>
   </div>
 </template>
 
 <script>
   import UserCard from "@/components/UserCard.vue"
+  import SkillsCard from "@/components/SkillsCard.vue"
 
   export default {
     components:{
-      UserCard
+      UserCard,
+      SkillsCard
     }
   }
 </script>
@@ -27,5 +32,11 @@
     height: 100vh;
 
     background-color: #181818;
+  }
+  .homeCards {
+    display: flex;
+    flex-direction: row;
+
+    justify-content: space-around;
   }
 </style>
