@@ -3,6 +3,7 @@
     <div class="homeCards">
       <UserCard/>
       <SkillsCard/>
+      <AchivimentsCard/>
     </div>
   </div>
 </template>
@@ -10,11 +11,13 @@
 <script>
   import UserCard from "@/components/UserCard.vue"
   import SkillsCard from "@/components/SkillsCard.vue"
+  import AchivimentsCard from "@/components/AchivimentsCard.vue"
 
   export default {
     components:{
       UserCard,
-      SkillsCard
+      SkillsCard,
+      AchivimentsCard
     }
   }
 </script>
@@ -37,6 +40,6 @@
     display: flex;
     flex-direction: row;
 
-    justify-content: space-around;
+    justify-content: space-evenly;
   }
 </style>

@@ -20,7 +20,7 @@
           </li>
           <li class="achivimentsSkill">
             <img src="@/assets/icons/Trophy.svg" alt="Troféu"> 
-            <p class="">Conquistas: 11 de 30 </p>
+            <p class="">Conquistas: </p>
           </li>
         </ul>
       </div>
@@ -51,9 +51,10 @@ export default {
   border-radius: 2%;
 
   background-color: #00000025;
+  box-shadow: 0 0 4px 0 #00000025;
 
   margin-top: 5%;
-  margin-bottom: 5%;
+  margin-bottom: 2%;
   margin-left: 1%;
 }
 

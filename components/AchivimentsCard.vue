@@ -1,31 +1,29 @@
 <template>
-  <div class="skillsCard Card">
+  <div class="achivimentsCard Card">
     <div class="HeaderCard">
-      <h3>Skills:</h3>
+      <h3>Conquistas:</h3>
     </div>
-    <!-- Skills -->
-    <div class="scrollSkills">
-      <!-- Skill Card -->
-      <Skill/>
+
+     <!-- Achiviments -->
+     <div class="scrollAchiviments">
+      <!-- Achiviments Card -->
+      <Achiviment/>
     </div>
   </div>
 </template>
 
 <script>
-  import Skill from "./Skill.vue"
-  export default {
-    name: "SkillsCard",
-    components: {
-      Skill
-    }
+import Achiviment from './Achiviment.vue';
+export default {
+  name: "AchivimentsCard",
+  components: {
+    Achiviment
   }
+}
 </script>
 
-<style scoped>
-  .skillsCard {
-    width: 30vw !important;
-  }
-  .scrollSkills {
+<style>
+  .scrollAchiviments {
     display: flex;
     flex-direction: column;
 
