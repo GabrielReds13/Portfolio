@@ -6,49 +6,31 @@
     <!-- Skills -->
     <div class="scrollSkills">
       <!-- Skill Card -->
-      <div class="skillCard">
-        <!-- Skill Infos -->
-        <div class="infoSkill">
-          <!-- Skill Icon -->
-          <img src="@/assets/SkillsIcons/VueLogo.svg" alt="VueJS">
-          <!-- Skill Status -->
-          <div class="skillStatus">
-            <h3 class="skillName">VueJS</h3>
-            <div class="dividerSkill"></div>
-            <!-- Status -->
-            <ul class="status">
-              <li class="levelSkill">
-                <img src="" alt=""> 
-                <p class=""></p>
-              </li>
-              <li class="progressSkill">
-                <img src="" alt=""> 
-                <p class=""></p>
-              </li>
-              <li class="achivimentsSkill">
-                <img src="" alt=""> 
-                <p class=""></p>
-              </li>
-            </ul>
-          </div>
-        </div>
-          
-        <!-- Progress Bar -->
-        <div class="progressBar"><div id="percentageProgress"></div></div>
-      </div>
+      <Skill/>
+      <Skill/>
+      <Skill/>
+      <Skill/>
+      <Skill/>
+      <Skill/>
+      <Skill/>
     </div>
   </div>
 </template>
 
 <script>
-  import "@/styles/SkillCardStyle.css"
-
+  import Skill from "./Skill.vue"
   export default {
     name: "SkillsCard",
+    components: {
+      Skill
+    }
   }
 </script>
 
 <style scoped>
+  .skillsCard {
+    width: 30vw !important;
+  }
   .scrollSkills {
     display: flex;
     flex-direction: column;
@@ -58,6 +40,18 @@
 
     justify-content: initial;
     align-items: center;
-    overflow: auto;
+    overflow-x: hidden;
+    overflow-y: scroll;
+  }
+
+  ::-webkit-scrollbar {
+    width: 5px;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #fff;
+    border-radius: 90px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #1A1A1A;
   }
 </style>
