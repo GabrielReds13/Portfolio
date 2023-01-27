@@ -1,5 +1,11 @@
 <template>
   <div class="container">
+    <!-- Head page -->
+    <head>
+      <title>GabrielReds13 - Home</title>
+    </head>
+
+    <!-- Content page -->
     <div class="backgroundProfile"></div>
     <div class="homeCards">
       <UserCard/>
