@@ -12,6 +12,8 @@
       <SkillsCard/>
       <AchivimentsCard/>
     </div>
+
+    <CertficateCard/>
   </div>
 </template>
 
@@ -19,17 +21,19 @@
   import UserCard from "@/components/UserCard.vue"
   import SkillsCard from "@/components/SkillsCard.vue"
   import AchivimentsCard from "@/components/AchivimentsCard.vue"
+  import CertficateCard from "@/components/CertficateCard.vue"
 
   export default {
     components:{
       UserCard,
       SkillsCard,
-      AchivimentsCard
+      AchivimentsCard,
+      CertficateCard
     }
   }
 </script>
 
-<style>
+<style scoped>
   * {
     margin: 0;
     padding: 0;
@@ -37,9 +41,10 @@
   .container {
     display: flex;
     flex-direction: column;
+    align-items: center;
 
     width: 100vw;
-    height: 100vh;
+    height: 280vh !important;
 
     background-color: #181818;
   }

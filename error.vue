@@ -2,7 +2,7 @@
   <div class="errorPage">
     <!-- Head page -->
     <head>
-      <title>Erro 404...</title>
+      <title>Erro 404 jogador...</title>
     </head>
 
     <!-- Content page -->
@@ -10,6 +10,10 @@
     <div class="messageError">
       <p>Nenhum troféu foi encontrado.</p>
     </div>
+
+    <NuxtLink class="returnToHome" to="/">
+        RETORNAR À HOME
+    </NuxtLink>
   </div>
 </template>
 
@@ -34,10 +38,11 @@ export default {
   }
   .messageError {
     display: flex;
+    min-width: 275px !important;
     width: 25vw;
     height: 8vh;
 
-    margin-top: 3%;
+    margin-top: 4vh;
 
     border: 0.5vh solid #fff;
     color: #fff;
@@ -45,5 +50,29 @@ export default {
 
     justify-content: center;
     align-items: center;
+  }
+  .returnToHome {
+    display: flex;
+
+    min-width: 275px !important;
+    width: 25vw !important;
+    height: 8vh !important;
+
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 5%;
+
+    border-radius: 1vh;
+
+    text-decoration: none;
+    font-weight: bold;
+    color: #fff;
+
+    background-color: #FF002E;
+    transition: 200ms ease-in-out;
+  }
+  .returnToHome:hover {
+    background-color: #ff224a;
   }
 </style>

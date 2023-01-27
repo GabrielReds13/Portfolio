@@ -1,0 +1,32 @@
+.buttonLeft,
+.buttonRight {
+  display: flex;
+
+  width: 10vh;
+  height: 10vh;
+  
+  justify-content: center;
+  align-items: center;
+
+  margin: 2%;
+
+  border-radius: 100%;
+  background-color: #1A1A1A;
+  box-shadow: 0 0 4px 0 #00000025;
+
+  transition: 200ms ease-in-out;
+  cursor: pointer;
+}
+.buttonLeft p {
+  font-size: 150%;
+  margin-right: 8%;
+}
+.buttonRight p {
+  font-size: 150%;
+  margin-left: 8%;
+}
+
+.buttonLeft:hover,
+.buttonRight:hover {
+  background-color: #252525;
+}

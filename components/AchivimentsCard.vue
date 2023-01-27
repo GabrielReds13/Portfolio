@@ -22,7 +22,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
   .scrollAchiviments {
     display: flex;
     flex-direction: column;
