@@ -14,6 +14,11 @@
     </div>
 
     <CertficateCard/>
+
+    <iframe src="../assets/certficatePhoto/Rocketseat/conectarCertificate.pdf" height="200" width="300"></iframe>
+
+    <p>Open a file <a href="../assets/certficatePhoto/Rocketseat/conectarCertificate.pdf">to the PDF!</a></p>
+
   </div>
 </template>
 
@@ -44,7 +49,7 @@
     align-items: center;
 
     width: 100vw;
-    height: 280vh !important;
+    height: 225vh !important;
 
     background-color: #181818;
   }

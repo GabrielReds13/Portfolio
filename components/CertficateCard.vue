@@ -28,7 +28,6 @@
         <p>▶</p>
       </div>
     </div>
-
   </div>
 </template>
 
@@ -44,7 +43,7 @@ export default {
   data() {
     return {
       certficates: [
-        {name: "Discover", origin: "Trilha Conectar", photo: "", workIcon: "@/assets/icons/Trophy.svg", color: "", backgrounColor: "linear-gradient(#0D0D0D, #1A0B3E)"},
+        {name: "Discover", origin: "Trilha Conectar", photo: "DiscoverConectar", workIcon: "RocketseatLogo", color: "#8257E5", backgrounColor: "linear-gradient(#0D0D0D, #1A0B3E)"},
       ],
       showCertficates: [{}],
       actualCertficates: [1, 2, 3]
