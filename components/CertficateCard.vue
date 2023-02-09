@@ -11,28 +11,15 @@
     
     <!-- Content card -->
     <div class="contentCard">
-      <!-- Button left -->
-      <div class="buttonLeft">
-        <p>◀</p>
-      </div>
-
       <!-- Certficates -->
-      <div class="certficatesAll">
-        <div v-for="certficateProps in showCertficates" :key="certficateProps.name">
-          <Certficate :name="certficateProps.name" :origin="certficateProps.origin" :photo="certficateProps.photo" :workIcon="certficateProps.workIcon" :color="certficateProps.color" :backgroundColor="certficateProps.backgrounColor" />
-        </div>
-      </div>
-
-      <!-- Button right -->
-      <div class="buttonRight">
-        <p>▶</p>
+      <div v-for="certficateProps in certficates" :key="certficateProps.key">
+        <Certficate :nameWork="certficateProps.nameWork" :courseName="certficateProps.courseName" :color="certficateProps.color" :backgroundColor="certficateProps.backgrounColor" />
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import '@/styles/ButtonStyle.css';
 import Certficate from "@/components/Certficate.vue"
 
 export default {
@@ -43,29 +30,19 @@ export default {
   data() {
     return {
       certficates: [
-        {name: "Discover", origin: "Trilha Conectar", photo: "DiscoverConectar", workIcon: "RocketseatLogo", color: "#8257E5", backgrounColor: "linear-gradient(#0D0D0D, #1A0B3E)"},
+        {key: "0" ,nameWork: "Rocketseat", courseName: "Discover - Conectar", photo: "DiscoverConectar", workIcon: "Rocketseat"},
+        {key: "1" ,nameWork: "Rocketseat", courseName: "Discover - Conectar", photo: "DiscoverConectar", workIcon: "Rocketseat",},
+        {key: "2" ,nameWork: "Rocketseat", courseName: "Discover - Conectar", photo: "DiscoverConectar", workIcon: "Rocketseat",},
+        {key: "3" ,nameWork: "Rocketseat", courseName: "Discover - Conectar", photo: "DiscoverConectar", workIcon: "Rocketseat",},
+        {key: "4" ,nameWork: "Rocketseat", courseName: "Discover - Conectar", photo: "DiscoverConectar", workIcon: "Rocketseat",},
+        {key: "5" ,nameWork: "Rocketseat", courseName: "Discover - Conectar", photo: "DiscoverConectar", workIcon: "Rocketseat",},
+        {key: "6" ,nameWork: "Rocketseat", courseName: "Discover - Conectar", photo: "DiscoverConectar", workIcon: "Rocketseat",},
       ],
-      showCertficates: [{}],
-      actualCertficates: [1, 2, 3]
     }
   },
   methods: {
-    async setCertficates() {
-      let getCertficates = []
-
-      if (this.certficates.length >= 3) {
-        getCertficates = [this.certficates[0], this.certficates[1], this.certficates[2]]
-      } else if (this.certficates.length > 1 && this.certficates.length < 3) {
-        getCertficates = [this.certficates[0], this.certficates[1]]
-      } else {
-        getCertficates = [this.certficates[0]]
-      }
-      
-      this.showCertficates = getCertficates
-    }
   },
   mounted() {
-   this.setCertficates() 
   }
 }
 </script>
@@ -117,19 +94,32 @@ export default {
   flex-direction: row;
 
   width: 100%;
-  height:82%;
+  height:100%;
   margin-top: 4%;
 
-  justify-content: space-between;
+  justify-content: initial;
   align-items: center;
-}
-.certficatesAll {
-  display: flex;
-  flex-direction: row;
 
-  justify-content: space-evenly;
-
-  width: 80%;
-  height: 100%;
+  overflow-x: scroll;
+  overflow-y: hidden;
 }
+
+/* Scrollbar */
+::-webkit-scrollbar {
+    height: 5px;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #fff;
+    border-radius: 90px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #1A1A1A;
+  }
+
+  /* Mobile */
+  @media (max-width: 992px) { 
+    .certficateCard {
+      margin-top: 205vh;
+    }
+  }
 </style>

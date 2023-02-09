@@ -1,17 +1,17 @@
 <template>
-  <div id="certficateCard" class="certficate">
+  <div :id='courseID.replace(" ", "")' class="certficate">
     <!-- Work log -->
     <div id="workLogo" class="workLogo">
-      <img  src="@/assets/workIcons/Rocketseat.svg" v-show="isRocketseat">
+      <img id="iconWorkLogo" src="@/assets/workIcons/Rocketseat.svg">
     </div>
     <!-- Content -->
     <div class="contentCertficateCard">
       <!-- Photo -->
-      <img id="photoCertficate" src="@/assets/certficatePhoto/Rocketseat/Discover/Conectar.png" alt="Discover - Conectar" v-show="isDiscoverConectar">
+      <img id="photoCertficate" src="@/assets/certficatePhoto/Rocketseat/Conectar.png" alt="Discover - Conectar">
       <!-- Details -->
-      <h3 id="nameCertficate">{{ name }}</h3>
+      <h3 id="nameCertficate">{{ nameWork }}</h3>
       <div class="dividerCertficate"></div>
-      <p class="originCertficate">{{ origin }}</p>
+      <p class="originCertficate">{{ courseName }}</p>
     </div>
   </div>
 </template>
@@ -20,32 +20,18 @@
 export default {
   name: "Certficate",
   props: {
-    name: String,
-    origin: String,
-    photo: String,
-    workIcon: String,
-    color: String,
-    backgroundColor: String,
+    nameWork: String,
+    courseName: String,
   },
   data() {
     return {
-      isRocketseat: false,
-      isDiscoverConectar: false
+      courseID: `${this.name}${this.origin}`
     }
   },
   methods: {
     async getStyleInCard() {
-      document.getElementById("certficateCard").style.background = `${this.backgroundColor}`
-      document.getElementById("certficateCard").style.border = `1vh solid ${this.color}`
-      document.getElementById("workLogo").style.backgroundColor = `${this.color}`
-
-      if(this.photo == "DiscoverConectar") {
-        this.isDiscoverConectar = true
-      } else {}
-      
-      if (this.workIcon == "RocketseatLogo") {
-        this.isRocketseat = true
-      } else {}
+      const idItem = this.courseID.replace(" ", "")
+      const getItem = document.getElementById(idItem)
     }
   },
   mounted() {
@@ -59,8 +45,7 @@ export default {
   .workLogo {
     display: flex;
     flex-direction: column;
-    position: absolute;
-    z-index: 2;
+    position: relative;
 
     min-width: 50px !important;
     width: 8vh;
@@ -68,6 +53,7 @@ export default {
     height: 8vh;
 
     border-radius: 0 0 6vh 0;
+    background-color: #7600BE;
   }
   .workLogo img {
     width: 50%;
@@ -78,18 +64,18 @@ export default {
   }
   /* Card */
   .certficate {
-    width: 280px;
-    height: 420px;
+    min-width: 280px !important;
+    min-height: 450px !important;
 
-    margin-left: 1%;
-    margin-right: 1%;
+    margin-left: 1vh;
+    margin-right: 1vh;
 
     border-radius: 1vh;
-    border: 1vh solid #ffffff00;
+    border: 1vh solid #7600BE;
     box-shadow: 0 0 4px 0 #00000025;
     cursor: pointer;
 
-    background: #0D0D0D;
+    background: linear-gradient(#0D0D0D, #540057);
 
     color: #fff;
   }

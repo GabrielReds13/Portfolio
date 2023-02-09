@@ -1,29 +1,35 @@
 <template>
   <div class="skillCard">
-    <!-- Skill Infos -->
-    <div class="infoSkill">
-      <!-- Skill Icon -->
-      <img class="skillLogo" src="@/assets/SkillsIcons/VueLogo.svg" alt="VueJS">
-      <!-- Skill Status -->
-      <div class="skillStatus">
-        <h3 class="skillName">VueJS</h3>
-        <div class="dividerSkill"></div>
-        <!-- Status -->
-        <ul class="status">
-          <li class="levelSkill">
-            <img src="@/assets/icons/StarLevel.svg" alt="Estrela"> 
-            <p class="">Nível: </p>
-          </li>
-          <li class="progressSkill">
-            <img src="@/assets/icons/ArrowLevel.svg" alt="Seta de nível"> 
-            <p class="">Progresso: </p>
-          </li>
-          <li class="achivimentsSkill">
-            <img src="@/assets/icons/Trophy.svg" alt="Troféu"> 
-            <p class="">Conquistas: </p>
-          </li>
-        </ul>
+    <!-- Content -->
+    <div class="contentSkillCard">
+
+      <!-- Skill Infos -->
+      <div class="infoSkill">
+        <!-- Skill Icon -->
+        <img class="skillLogo" src="@/assets/SkillsIcons/VueLogo.svg" alt="VueJS">
+
+        <!-- Skill Status -->
+        <div class="skillStatus">
+          <h3 class="skillName">VueJS</h3>
+          <div class="dividerSkill"></div>
+          <!-- Status -->
+          <ul class="status">
+            <li class="levelSkill">
+              <img src="@/assets/icons/StarLevel.svg" alt="Estrela"> 
+              <p class="">Nível: </p>
+            </li>
+            <li class="progressSkill">
+              <img src="@/assets/icons/ArrowLevel.svg" alt="Seta de nível"> 
+              <p class="">Progresso: </p>
+            </li>
+            <li class="achivimentsSkill">
+              <img src="@/assets/icons/Trophy.svg" alt="Troféu"> 
+              <p class="">Conquistas: 50 de 50</p>
+            </li>
+          </ul>
+        </div>
       </div>
+
     </div>
       
     <!-- Progress Bar -->
@@ -38,7 +44,7 @@ export default {
 </script>
 
 <style scoped>
-  .skillCard {
+.skillCard {
   display: flex;
   flex-direction: column;
 
@@ -55,48 +61,41 @@ export default {
 
   margin-top: 5%;
   margin-bottom: 2%;
-  margin-left: 1%;
 }
-
-/* Progress Bar */
-.progressBar {
-  width: 100%;
-  height: 5%;
-
-  background-color: #1A1A1A;
-}
-#percentageProgress {
-  width: 25%;
-  height: 100%;
-
-  background-color: #fff;
-}
-
-.infoSkill {
+.contentSkillCard {
   display: flex;
-  flex-direction: row;
+
+  width: 100%;
+  height: 95%;
+  
+  align-items: center;
+  
 }
 
 /* Skill Info */
 .infoSkill {
   display: flex;
+  flex-direction: row;
+  
+  width: 100%;
 
+  justify-content: space-around;
   align-items: center;
-  transform: translateX(8%);
+
+  transform: translateX(2%);
   margin-top: 2%;
 }
 .skillLogo {
   display: flex;
-
-  width: 25%;
-  height: 75%;
+  
+  width: 12vh;
+  height: 12vh;
 }
 
 .skillStatus {
   display: flex;
   flex-direction: column;
-  transform: translateX(10%);
-
+  
   width: 60%;
 }
 
@@ -133,5 +132,19 @@ export default {
 }
 .levelSkill p {
   margin-left: 8.5% !important;
+}
+
+/* Progress Bar */
+.progressBar {
+  width: 100%;
+  height: 5%;
+
+  background-color: #1A1A1A;
+}
+#percentageProgress {
+  width: 25%;
+  height: 100%;
+
+  background-color: #fff;
 }
 </style>

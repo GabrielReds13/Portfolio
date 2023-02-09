@@ -42,8 +42,15 @@ export default {
     width: 100vw;
 
     margin-top: 2vh;
-
+    
     position: absolute !important;
     z-index: 1 !important;
+  }
+  
+  /* Mobile */
+  @media (max-width: 992px) { 
+    .contentPage {
+      margin-top: 6vh;
+    }
   }
 </style>

@@ -54,9 +54,9 @@ export default {
   align-items: center;
 
   min-width: 70px !important;
-  width: 21%;
+  width: 11vh;
   min-height: 70px !important;
-  height: 76%;
+  height: 11vh;
 
   margin-left: 3.5%;
 

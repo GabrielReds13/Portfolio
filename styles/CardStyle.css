@@ -4,6 +4,7 @@
   
   width: 28vw;
   height: 78vh;
+  margin-bottom: 5vh !important;
 
   align-items: center;
 
@@ -30,4 +31,12 @@
 
 .HeaderCard h3 {
   transform: translateX(5%);
+}
+
+/* Mobile */
+@media (max-width: 992px) { 
+  .Card {
+    width: 90vw !important;
+    height: 70vh;
+  }
 }

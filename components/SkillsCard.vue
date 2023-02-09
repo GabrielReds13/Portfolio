@@ -23,7 +23,7 @@
 
 <style scoped>
   .skillsCard {
-    width: 30vw !important;
+    width: 30vw;
   }
   .scrollSkills {
     display: flex;

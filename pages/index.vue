@@ -13,12 +13,9 @@
       <AchivimentsCard/>
     </div>
 
+    <!-- Certficate section -->
+    <!-- <viewCertficate/> -->
     <CertficateCard/>
-
-    <iframe src="../assets/certficatePhoto/Rocketseat/conectarCertificate.pdf" height="200" width="300"></iframe>
-
-    <p>Open a file <a href="../assets/certficatePhoto/Rocketseat/conectarCertificate.pdf">to the PDF!</a></p>
-
   </div>
 </template>
 
@@ -27,13 +24,15 @@
   import SkillsCard from "@/components/SkillsCard.vue"
   import AchivimentsCard from "@/components/AchivimentsCard.vue"
   import CertficateCard from "@/components/CertficateCard.vue"
+  import viewCertficate from "~~/components/viewCertficate.vue"
 
   export default {
     components:{
       UserCard,
       SkillsCard,
       AchivimentsCard,
-      CertficateCard
+      CertficateCard,
+      viewCertficate
     }
   }
 </script>
@@ -49,7 +48,7 @@
     align-items: center;
 
     width: 100vw;
-    height: 225vh !important;
+    height: 190vh;
 
     background-color: #181818;
   }
@@ -59,9 +58,10 @@
     width: 100vw;
     height: 25vh;
 
-    background-image: url("@/assets/BackgrounPhoto.jpg");
+    background-image: url("@/assets/BackgrounPhoto.svg");
     background-repeat: repeat;
-    background-position: center left;
+    background-position: center;
+    background-color: #000208;
   }
 
   /* Home */
@@ -73,8 +73,19 @@
     margin-top: 5%;
 
     justify-content: space-evenly;
+    align-items: center;
 
     position: absolute;
     z-index: 3;
+  }
+
+  /* Mobile */
+  @media (max-width: 992px) { 
+    .homeCards {
+      flex-direction: column;
+    }
+    .container {
+      height: 550vw !important;
+    }
   }
 </style>

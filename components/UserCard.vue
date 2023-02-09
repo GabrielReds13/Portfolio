@@ -73,7 +73,7 @@
     width: 60%;
     height: 0.5%;
 
-    margin: 6%;
+    margin: 4vh;
     border-radius: 999px;
 
     background-color: #fff;
@@ -88,9 +88,14 @@
 
     width: 36%;
 
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
+
     text-decoration: none;
     color: #C4C4C4;
+  }
+  .userGithub {
+    margin-left: 1vh;
   }
   .userBio {
     text-align: center;
