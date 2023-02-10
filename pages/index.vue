@@ -14,7 +14,6 @@
     </div>
 
     <!-- Certficate section -->
-    <!-- <viewCertficate/> -->
     <CertficateCard/>
   </div>
 </template>
@@ -24,7 +23,6 @@
   import SkillsCard from "@/components/SkillsCard.vue"
   import AchivimentsCard from "@/components/AchivimentsCard.vue"
   import CertficateCard from "@/components/CertficateCard.vue"
-  import viewCertficate from "~~/components/viewCertficate.vue"
 
   export default {
     components:{
@@ -32,7 +30,6 @@
       SkillsCard,
       AchivimentsCard,
       CertficateCard,
-      viewCertficate
     }
   }
 </script>

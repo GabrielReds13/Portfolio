@@ -1,5 +1,5 @@
 <template>
-  <div :id='courseID.replace(" ", "")' class="certficate">
+  <div :id='courseID.replace(" ", "")' class="certficate" @click="enableViewCertficate">
     <!-- Work log -->
     <div id="workLogo" class="workLogo">
       <img id="iconWorkLogo" src="@/assets/workIcons/Rocketseat.svg">
@@ -7,37 +7,47 @@
     <!-- Content -->
     <div class="contentCertficateCard">
       <!-- Photo -->
-      <img id="photoCertficate" src="@/assets/certficatePhoto/Rocketseat/Conectar.png" alt="Discover - Conectar">
+      <img id="photoCertficate" src="@/assets/certficatePhoto/Rocketseat/Conectar/Conectar.png" :alt="courseName">
       <!-- Details -->
       <h3 id="nameCertficate">{{ nameWork }}</h3>
       <div class="dividerCertficate"></div>
       <p class="originCertficate">{{ courseName }}</p>
     </div>
+
+    <viewCertficate :courseCertficate="courseCertficate" v-show="showCertficate" />
   </div>
 </template>
 
 <script>
+import viewCertficate from "~~/components/viewCertficate.vue"
+
 export default {
   name: "Certficate",
+  components: {
+      viewCertficate
+  },
   props: {
     nameWork: String,
     courseName: String,
+    certficate: String,
+    key: Number
   },
   data() {
     return {
-      courseID: `${this.name}${this.origin}`
+      courseID: `${this.nameWork}${this.key}`,
+      courseCertficate: this.certficate,
+      showCertficate: false
     }
   },
   methods: {
-    async getStyleInCard() {
-      const idItem = this.courseID.replace(" ", "")
-      const getItem = document.getElementById(idItem)
+    enableViewCertficate() {
+      if (this.showCertficate == false) {
+        this.showCertficate = true
+      } else {
+        this.showCertficate = false
+      }
     }
   },
-  mounted() {
-    this.getStyleInCard()
-  }
-  
 }
 </script>
 

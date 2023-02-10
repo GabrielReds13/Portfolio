@@ -13,7 +13,7 @@
     <div class="contentCard">
       <!-- Certficates -->
       <div v-for="certficateProps in certficates" :key="certficateProps.key">
-        <Certficate :nameWork="certficateProps.nameWork" :courseName="certficateProps.courseName" :color="certficateProps.color" :backgroundColor="certficateProps.backgrounColor" />
+        <Certficate :key="certficateProps.key" :nameWork="certficateProps.nameWork" :courseName="certficateProps.courseName" :certficate="certficateProps.certficate" />
       </div>
     </div>
   </div>
@@ -30,13 +30,7 @@ export default {
   data() {
     return {
       certficates: [
-        {key: "0" ,nameWork: "Rocketseat", courseName: "Discover - Conectar", photo: "DiscoverConectar", workIcon: "Rocketseat"},
-        {key: "1" ,nameWork: "Rocketseat", courseName: "Discover - Conectar", photo: "DiscoverConectar", workIcon: "Rocketseat",},
-        {key: "2" ,nameWork: "Rocketseat", courseName: "Discover - Conectar", photo: "DiscoverConectar", workIcon: "Rocketseat",},
-        {key: "3" ,nameWork: "Rocketseat", courseName: "Discover - Conectar", photo: "DiscoverConectar", workIcon: "Rocketseat",},
-        {key: "4" ,nameWork: "Rocketseat", courseName: "Discover - Conectar", photo: "DiscoverConectar", workIcon: "Rocketseat",},
-        {key: "5" ,nameWork: "Rocketseat", courseName: "Discover - Conectar", photo: "DiscoverConectar", workIcon: "Rocketseat",},
-        {key: "6" ,nameWork: "Rocketseat", courseName: "Discover - Conectar", photo: "DiscoverConectar", workIcon: "Rocketseat",},
+        {key: 0 ,nameWork: "Rocketseat", courseName: "Discover - Conectar", certficate: "CertificadoConectar"},
       ],
     }
   },

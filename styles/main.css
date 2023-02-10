@@ -14,3 +14,8 @@
 ::-webkit-scrollbar-track {
   background: #1A1A1A;
 }
+
+::selection {
+  background-color: #2e273a;
+  color: #FF002E;
+}
